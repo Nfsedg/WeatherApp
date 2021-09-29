@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="" content="">
+    <link rel="stylesheet" href="../styles/compiler/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Weather</title>
+</head>
+<body>
+    <nav class="nav-wrapper">
+        <div class="navigation">
+            <div class="navigation__links">
+                <a href="#" class="navigation__links--logo"></a>
+                <li class="navigation__list">
+                    <li><a href="./index.html">Weather</a></li>
+                    <li><a href="">5 Days</a></li>
+                    <li><a href="./maps.html">Maps</a></li>
+                    <li><a href="">Air Polution</a></li>
+                </ul>
+            </div>
+            <div class="navigation__menu">Menu</div>
+        </div>
+    </nav>
+    <main>
+        <section class="search">
+            <p>Search City</p>
+            <input type="text" id="search" placeholder="City name" class="search__input">
+            <button id="searchBtn" class="search__search">Search</button>
+            <p id="idresult" class="search__id"></p>
+            <button id="getinfo" class="search__get">Get</button>
+            <button class="search__clear">Clear</button>
+        </section>
+        <section>
+            <div id="app" class="card-container">
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script type="module" src="../templates/my-card.js"></script>
+    <script src="../templates/card.js"></script>
+    <script src="../src/getData.js"></script>
+    <script src="../src/main.js"></script>
+</body>
+</html>

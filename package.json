@@ -1,0 +1,14 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Weather app with openwather API",
+  "main": "index.js",
+  "scripts": {
+    "callback": "node test/api.js"
+  },
+  "author": "Edgar Pech <edgaropech@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  }
+}

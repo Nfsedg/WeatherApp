@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  font-family: "Rubik", sans-serif;
+  background-color: #9198e5;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 55px;
+  background-color: rgba(56, 79, 112, 0.863);
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+}
+.navigation__links {
+  display: flex;
+  align-items: center;
+}
+.navigation__links li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 9px;
+}
+.navigation__links a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: aliceblue;
+}
+.navigation__links--logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  background-image: url("../assets/cloudy.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  width: 1040px;
+  margin: 0 auto;
+}
+
+.search {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.search p {
+  font-size: 2.2rem;
+  font-weight: 400;
+  grid-column: 1/3;
+}
+.search__search, .search__id, .search__get {
+  grid-column: 1/2;
+}
+.search__input {
+  margin-bottom: 8px;
+  height: 30px;
+  padding: 0 8px;
+  border: 2px solid rgba(56, 79, 112, 0.863);
+  border-radius: 14px;
+  background-color: rgba(214, 231, 255, 0.603);
+  outline: none;
+}
+.search__search {
+  cursor: pointer;
+  width: 90px;
+  height: 34px;
+  background-color: rgba(56, 79, 112, 0.863);
+  font-weight: 500;
+  font-size: 1.5rem;
+  border-radius: 14px;
+  border: none;
+  justify-self: center;
+  transition: width 0.8s;
+}
+.search__search:hover {
+  width: 100%;
+}
+.search__get {
+  cursor: pointer;
+  width: 90px;
+  height: 34px;
+  background-color: rgba(56, 79, 112, 0.863);
+  font-weight: 500;
+  font-size: 1.5rem;
+  border-radius: 14px;
+  border: none;
+  justify-self: center;
+}
+.search__clear {
+  cursor: pointer;
+  width: 90px;
+  height: 34px;
+  background-color: rgba(56, 79, 112, 0.863);
+  font-weight: 500;
+  font-size: 1.5rem;
+  border-radius: 14px;
+  border: none;
+  justify-self: center;
+}
+
+.card-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: linear-gradient(35deg, #e66465, #9198e5);
+  width: 450px;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 15px;
+  border-radius: 15px;
+  border: 1px solid rgba(150, 150, 150, 0.342);
+  margin: 20px;
+}
+.card__coutry {
+  font-size: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__coutry h2, .card__coutry h3 {
+  margin: 0 auto;
+  display: inline-block;
+}
+.card__temp {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+.card__temp > p span {
+  font-size: 2.4rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
