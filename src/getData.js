@@ -19,18 +19,3 @@ async function getData(id) {
         }
     
 }
-
-async function cityData(city) {
-    try {
-        const getData = await fetch(DATA_Country);
-        response = await getData.json()
-        let data = response.find(element => element.name === `${city}`)
-        
-        cityId = data.id
-        pId.innerText = cityId
-        return await cityId
-    } catch(err) {
-        alert('City has not found')
-    }
-
-}
