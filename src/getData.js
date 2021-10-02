@@ -1,4 +1,4 @@
-const base_URL = (id) => {URL = `https://api.openweathermap.org/data/2.5/weather?id=${id}&appid=80a64f8265abf68fe01f13c639d6f142`; return URL}
+const base_URL = (id) => {URL = `https://api.openweathermap.org/data/2.5/weather?q=${id}&appid=80a64f8265abf68fe01f13c639d6f142`; return URL}
 const DATA_Country = '../data/city.list.json';
 const appContainer = document.querySelector('#app');
 const celcius = 273.15;
@@ -15,7 +15,8 @@ async function getData(id) {
         
             console.log(reponseJson);
         } catch(err) {
-            alert(err)
+            console.error(err)
+            alert("City don't found")
         }
     
 }

@@ -31,8 +31,8 @@
             <p>Search City</p>
             <input type="text" id="search" placeholder="City name" class="search__input">
             <button id="searchBtn" class="search__search">Search</button>
-            <p id="idresult" class="search__id"></p>
-            <button id="getinfo" class="search__get">Get</button>
+            <!-- <p id="idresult" class="search__id"></p> -->
+            <!-- <button id="getinfo" class="search__get">Get</button> -->
             <button class="search__clear">Clear</button>
         </section>
         <section>
@@ -41,26 +41,9 @@
         </section>
     </main>
     <footer></footer>
-
-    <script>
-    async function cityData(city) {
-        try {
-            const getData = await fetch(DATA_Country);
-            response = await getData.json()
-            let data = response.find(element => element.name === `${city}`)
-            
-            cityId = data.id
-            pId.innerText = cityId
-            return await cityId
-        } catch(err) {
-            alert('City has not found')
-        }
-    }
-    </script>
     <script type="module" src="./templates/my-card.js"></script>
     <script src="./templates/card.js"></script>
     <script src="./src/getData.js"></script>
     <script src="./src/main.js"></script>
-    <script type="text/javascript" src="./data/city.list.json"></script>
 </body>
 </html>
