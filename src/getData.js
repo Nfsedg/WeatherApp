@@ -13,9 +13,9 @@ async function getData(id) {
             div.innerHTML = newCard;
             appContainer.appendChild(div)
         
-            console.log(reponseJson);
+            // console.log(reponseJson);
         } catch(err) {
-            alert(err)
+            console.error(err)
         }
     
 }
@@ -30,7 +30,31 @@ async function cityData(city) {
         pId.innerText = cityId
         return await cityId
     } catch(err) {
-        alert('City has not found')
+        console.warn('City has not found')
+        alert('City not found')
     }
 
 }
+
+const searchData = (city) => {
+    return new Promise((resolve, reject) => {
+        if(true) {
+            resolve(cityData(city))
+        } else {
+            reject(console.error('City has not found'))
+        }
+    })
+}
+
+searchData('Tokyo')
+    .then(data => {
+        // console.log(data)
+        return data;
+    })
+    .then(data => {
+        // console.log(getData(data))
+        getData(data)
+    })
+    .catch(err => {
+        console.error(err)
+    })

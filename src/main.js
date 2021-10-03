@@ -4,20 +4,21 @@ const btn = document.getElementById('getinfo')
 const searchBtn = document.getElementById('searchBtn')
 const clearBtn = document.querySelector('.search__clear')
 
-let temp;
-
-function toCelcius(temp) {
-    temp -= celcius;
-}
-
 search.addEventListener('keydown', (key)=> {
     if(key.keyCode === 13) {
-        cityData(search.value)
+        searchData(search.value)
+            .then(data => {
+                return data;
+            })
+            .then(data => {
+                getData(data)
+            })
+            .catch(err => {
+                console.error(err)
+            })
         search.value = ''
     }
 })
-searchBtn.addEventListener('click', () => cityData(search.value)
-)
 
 btn.addEventListener('click', () => {
     if(pId.innerText !== '') {
